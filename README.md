@@ -259,4 +259,4 @@ http://localhost:3000
 
 # Author
 
-Designed and Developed by **Sachin Kumar** [meetabhishek.in](https://www.meetabhishek.in/)
+Designed and Developed by **Sachin Kumar**
