@@ -4,10 +4,10 @@ import "./globals.css";
 
 
 export const metadata: Metadata = {
-  title: "Skribbl.io Clone | Abhishek Sharma",
+  title: "Skribbl.io Clone | Sachin Kumar",
   description: "A real-time multiplayer drawing and guessing game built with Next.js, Socket.IO, and Node.js. Developed by Abhishek Kumar Sharma.",
   openGraph: {
-    title: "Skribbl.io Clone | Abhishek Sharma",
+    title: "Skribbl.io Clone | Sachin Kumar",
     description: "Play this real-time multiplayer drawing and guessing game. Built from scratch using Next.js and WebSockets.",
     url: "https://skribbl-frontend-mocha.vercel.app",
     siteName: "Skribbl.io Clone",
@@ -15,7 +15,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Skribbl.io Clone | Abhishek Sharma",
+    title: "Skribbl.io Clone | Sachin Kumar",
     description: "Real-time multiplayer drawing and guessing game.",
   },
 };

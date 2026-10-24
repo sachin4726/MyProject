@@ -22,7 +22,7 @@ export default function LobbyScreen() {
   const [maxPlayers, setMaxPlayers] = useState(8);
   const [showSettings, setShowSettings] = useState(false);
 
-  const randomNames = ["DoodleKoala", "SketchNinja", "ArtisticPotato", "DrawMaster", "PencilHero"];
+  const randomNames = ["DoodleKoala", "Sachin","SketchNinja", "ArtisticPotato", "DrawMaster", "PencilHero"];
   const pickRandomName = () => setName(randomNames[Math.floor(Math.random() * randomNames.length)]);
 
   useEffect(() => {
@@ -167,11 +167,11 @@ export default function LobbyScreen() {
       {/* 🚀 Premium Responsive Footer Section (Using Raw SVGs) */}
       <div className="z-10 mt-8 flex flex-col items-center gap-2 opacity-50 hover:opacity-100 transition-opacity duration-300">
         <p className="text-[11px] md:text-xs font-medium tracking-[0.15em] text-gray-400 uppercase">
-          Designed & Developed by <span className="text-cyan-400 font-extrabold tracking-normal">Abhishek Sharma</span>
+          Designed & Developed by <span className="text-cyan-400 font-extrabold tracking-normal">Sachin Kumar</span>
         </p>
         <div className="flex gap-4 mt-1">
           <a 
-            href="https://github.com/AbhishekKTech" 
+            href="https://github.com/sachin4726" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-white transition-colors duration-200 transform hover:scale-110"
@@ -183,7 +183,7 @@ export default function LobbyScreen() {
             </svg>
           </a>
           <a 
-            href="https://www.linkedin.com/in/abhishekktech/" 
+            href="https://www.linkedin.com/in/sachin4726/" 
             target="_blank" 
             rel="noopener noreferrer"
             className="text-gray-400 hover:text-[#0A66C2] transition-colors duration-200 transform hover:scale-110"
