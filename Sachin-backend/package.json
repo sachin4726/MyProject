@@ -1,13 +1,19 @@
 {
   "name": "skribbl-backend",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Authoritative game server for Skribbl clone real-time multiplayer drawing game",
+  "main": "src/main.js",
   "scripts": {
+    "start": "node src/main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "skribbl",
+    "multiplayer",
+    "socket.io",
+    "drawing-game"
+  ],
+  "author": "Sachin Kumar (https://github.com/sachin4726)",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {

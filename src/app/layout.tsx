@@ -5,7 +5,9 @@ import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Skribbl.io Clone | Sachin Kumar",
-  description: "A real-time multiplayer drawing and guessing game built with Next.js, Socket.IO, and Node.js. Developed by Abhishek Kumar Sharma.",
+  description: "A real-time multiplayer drawing and guessing game built with Next.js, Socket.IO, and Node.js. Developed by Sachin Kumar.",
+  authors: [{ name: "Sachin Kumar", url: "https://github.com/sachin4726" }],
+  creator: "Sachin Kumar",
   openGraph: {
     title: "Skribbl.io Clone | Sachin Kumar",
     description: "Play this real-time multiplayer drawing and guessing game. Built from scratch using Next.js and WebSockets.",

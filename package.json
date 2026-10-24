@@ -2,6 +2,8 @@
   "name": "skribbl-frontend",
   "version": "0.1.0",
   "private": true,
+  "description": "Real-time multiplayer drawing and guessing game frontend built with Next.js, React 19, and Tailwind CSS",
+  "author": "Sachin Kumar (https://github.com/sachin4726)",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
