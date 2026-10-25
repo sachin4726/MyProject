@@ -11,7 +11,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Skribbl.io Clone | Sachin Kumar",
     description: "Play this real-time multiplayer drawing and guessing game. Built from scratch using Next.js and WebSockets.",
-    url: "https://skribbl-frontend-mocha.vercel.app",
+    url: "https://my-project-psi-plum-82.vercel.app",
     siteName: "Skribbl.io Clone",
     type: "website",
   },

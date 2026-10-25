@@ -10,7 +10,7 @@ An authoritative, event-driven game server for the Skribbl multiplayer drawing a
 - **GitHub:** [@sachin4726](https://github.com/sachin4726)
 - **Profile:** [https://github.com/sachin4726](https://github.com/sachin4726)
 - **Bio:** *Software Developer | Building useful things | Always learning*
-- **Live Application:** [https://skribbl-frontend-mocha.vercel.app/](https://skribbl-frontend-mocha.vercel.app/)
+- **Live Application:** [https://my-project-psi-plum-82.vercel.app/](https://my-project-psi-plum-82.vercel.app/)
 
 ---
 

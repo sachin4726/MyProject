@@ -6,7 +6,7 @@
   <strong>A high-performance, full-stack multiplayer drawing and guessing game built with Next.js, HTML5 Canvas, Node.js, and Socket.IO.</strong>
 </p>
 
-[![Live Demo](https://img.shields.io/badge/Live%20Demo-skribbl--frontend--mocha.vercel.app-00dfa2?style=for-the-badge&logo=vercel&logoColor=white)](https://skribbl-frontend-mocha.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-my--project--psi--plum--82.vercel.app-00dfa2?style=for-the-badge&logo=vercel&logoColor=white)](https://my-project-psi-plum-82.vercel.app/)
 [![Author](https://img.shields.io/badge/Author-Sachin%20Kumar-00d2ff?style=for-the-badge&logo=github&logoColor=white)](https://github.com/sachin4726)
 [![GitHub Profile](https://img.shields.io/badge/GitHub-sachin4726-181717?style=for-the-badge&logo=github)](https://github.com/sachin4726)
 [![Next.js](https://img.shields.io/badge/Next.js-16.2-black?style=for-the-badge&logo=next.js&logoColor=white)](https://nextjs.org/)
@@ -16,7 +16,7 @@
 [![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-v4-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
 
 <p align="center">
-  🚀 <strong>Live Demo:</strong> <a href="https://skribbl-frontend-mocha.vercel.app/" target="_blank"><strong>https://skribbl-frontend-mocha.vercel.app/</strong></a>
+  🚀 <strong>Live Demo:</strong> <a href="https://my-project-psi-plum-82.vercel.app/" target="_blank"><strong>https://my-project-psi-plum-82.vercel.app/</strong></a>
 </p>
 
 ---
