@@ -258,7 +258,6 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to launch th
 - Repository: [sachin4726/MyProject](https://github.com/sachin4726)
 - LinkedIn: [sachin4726](https://www.linkedin.com/in/sachin4726/)
 
----
 
 ## 📝 License
 
