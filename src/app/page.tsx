@@ -56,21 +56,21 @@ export default function LobbyScreen() {
   };
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0B0B1A] via-[#16123A] to-[#0B0B1A] text-white flex flex-col items-center justify-center p-4 font-sans relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#06130D] via-[#0B2418] to-[#06130D] text-white flex flex-col items-center justify-center p-4 font-sans relative overflow-hidden">
       
       {/* Background Glowing Orbs (Responsive sizes) */}
-      <div className="absolute top-[-5%] left-[-10%] w-64 h-64 md:w-96 md:h-96 bg-purple-600/20 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-[-5%] right-[-10%] w-64 h-64 md:w-96 md:h-96 bg-cyan-600/20 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div>
+      <div className="absolute top-[-5%] left-[-10%] w-64 h-64 md:w-96 md:h-96 bg-emerald-600/20 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-[-5%] right-[-10%] w-64 h-64 md:w-96 md:h-96 bg-emerald-600/20 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div>
 
       {/* Main Title Section */}
       <div className="text-center mb-8 md:mb-10 z-10 animate-fade-in">
         <div className="flex justify-center items-center gap-3 md:gap-4 mb-2 md:mb-3">
-          <Gamepad2 className="w-10 h-10 md:w-12 md:h-12 text-cyan-400 drop-shadow-[0_0_15px_rgba(34,211,238,0.8)]" />
-          <h1 className="text-4xl md:text-6xl font-black tracking-[0.1em] md:tracking-[0.15em] text-white drop-shadow-[0_0_25px_rgba(168,85,247,0.7)]">
+          <Gamepad2 className="w-10 h-10 md:w-12 md:h-12 text-emerald-400 drop-shadow-[0_0_15px_rgba(52,211,153,0.8)]" />
+          <h1 className="text-4xl md:text-6xl font-black tracking-[0.1em] md:tracking-[0.15em] text-white drop-shadow-[0_0_25px_rgba(52,211,153,0.7)]">
             SKRIBBL
           </h1>
         </div>
-        <p className="text-cyan-100/50 font-bold tracking-[0.15em] md:tracking-[0.25em] uppercase text-[10px] md:text-xs mt-2">
+        <p className="text-emerald-100/50 font-bold tracking-[0.15em] md:tracking-[0.25em] uppercase text-[10px] md:text-xs mt-2">
           Multiplayer Drawing & Guessing
         </p>
       </div>
@@ -85,11 +85,11 @@ export default function LobbyScreen() {
             value={name}
             onChange={(e) => setName(e.target.value)}
             placeholder="Enter your alias"
-            className="flex-1 min-w-0 px-3 py-3 md:px-5 md:py-4 bg-black/40 border border-gray-700/50 rounded-xl md:rounded-2xl font-semibold text-sm md:text-lg text-white placeholder-gray-500 focus:outline-none focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50 transition-all"
+            className="flex-1 min-w-0 px-3 py-3 md:px-5 md:py-4 bg-black/40 border border-gray-700/50 rounded-xl md:rounded-2xl font-semibold text-sm md:text-lg text-white placeholder-gray-500 focus:outline-none focus:border-emerald-400/50 focus:ring-1 focus:ring-emerald-400/50 transition-all"
           />
           <button 
             onClick={pickRandomName}
-            className="shrink-0 bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-3 md:p-4 rounded-xl md:rounded-2xl text-cyan-400 hover:text-cyan-300 transition-colors flex items-center justify-center group"
+            className="shrink-0 bg-white/5 hover:bg-white/10 border border-white/10 px-3 py-3 md:p-4 rounded-xl md:rounded-2xl text-emerald-400 hover:text-emerald-300 transition-colors flex items-center justify-center group"
             title="Generate Random Name"
           >
             <Dices className="w-5 h-5 md:w-7 md:h-7 group-hover:rotate-180 transition-transform duration-500" />
@@ -102,7 +102,7 @@ export default function LobbyScreen() {
             onClick={() => setShowSettings(!showSettings)}
             className="w-full flex items-center justify-between bg-black/20 hover:bg-black/40 border border-gray-700/50 text-gray-300 font-semibold py-3 px-4 md:py-4 md:px-6 rounded-xl md:rounded-2xl transition-all"
           >
-            <span className="flex items-center gap-2 md:gap-3 text-sm md:text-base"><Settings className="w-5 h-5 text-purple-400" /> Session Config</span>
+            <span className="flex items-center gap-2 md:gap-3 text-sm md:text-base"><Settings className="w-5 h-5 text-emerald-400" /> Session Config</span>
             <span className="text-[10px] md:text-xs tracking-widest text-gray-500">{showSettings ? 'CLOSE' : 'EXPAND'}</span>
           </button>
 
@@ -110,21 +110,21 @@ export default function LobbyScreen() {
             <div className="mt-2 md:mt-3 bg-black/40 border border-gray-700/50 p-4 md:p-6 rounded-xl md:rounded-2xl space-y-4 md:space-y-6 animate-fade-in">
               <div>
                 <div className="flex justify-between font-semibold text-xs md:text-sm mb-2 md:mb-3 text-gray-300">
-                  <span>Total Rounds</span> <span className="text-cyan-400">{rounds}</span>
+                  <span>Total Rounds</span> <span className="text-emerald-400">{rounds}</span>
                 </div>
-                <input type="range" min="2" max="10" step="1" value={rounds} onChange={(e) => setRounds(parseInt(e.target.value))} className="w-full accent-cyan-400" />
+                <input type="range" min="2" max="10" step="1" value={rounds} onChange={(e) => setRounds(parseInt(e.target.value))} className="w-full accent-emerald-400" />
               </div>
               <div>
                 <div className="flex justify-between font-semibold text-xs md:text-sm mb-2 md:mb-3 text-gray-300">
-                  <span>Draw Duration</span> <span className="text-cyan-400">{drawTime}s</span>
+                  <span>Draw Duration</span> <span className="text-emerald-400">{drawTime}s</span>
                 </div>
-                <input type="range" min="15" max="240" step="5" value={drawTime} onChange={(e) => setDrawTime(parseInt(e.target.value))} className="w-full accent-cyan-400" />
+                <input type="range" min="15" max="240" step="5" value={drawTime} onChange={(e) => setDrawTime(parseInt(e.target.value))} className="w-full accent-emerald-400" />
               </div>
               <div>
                 <div className="flex justify-between font-semibold text-xs md:text-sm mb-2 md:mb-3 text-gray-300">
-                  <span>Max Capacity</span> <span className="text-cyan-400">{maxPlayers} Players</span>
+                  <span>Max Capacity</span> <span className="text-emerald-400">{maxPlayers} Players</span>
                 </div>
-                <input type="range" min="2" max="20" step="1" value={maxPlayers} onChange={(e) => setMaxPlayers(parseInt(e.target.value))} className="w-full accent-cyan-400" />
+                <input type="range" min="2" max="20" step="1" value={maxPlayers} onChange={(e) => setMaxPlayers(parseInt(e.target.value))} className="w-full accent-emerald-400" />
               </div>
             </div>
           )}
@@ -133,7 +133,7 @@ export default function LobbyScreen() {
         {/* Create Room Button (Neon Purple Gradient) */}
         <button
           onClick={handleCreateRoom}
-          className="w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white font-bold text-sm md:text-xl py-3 md:py-4 rounded-xl md:rounded-2xl flex items-center justify-center gap-2 md:gap-3 shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:shadow-[0_0_30px_rgba(124,58,237,0.5)] transition-all transform hover:-translate-y-1"
+          className="w-full bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white font-bold text-sm md:text-xl py-3 md:py-4 rounded-xl md:rounded-2xl flex items-center justify-center gap-2 md:gap-3 shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] transition-all transform hover:-translate-y-1"
         >
           <Play className="w-4 h-4 md:w-6 md:h-6" fill="currentColor" /> INITIATE LOBBY
         </button>
@@ -152,11 +152,11 @@ export default function LobbyScreen() {
             value={roomId}
             onChange={(e) => setRoomId(e.target.value)}
             placeholder="ROOM ID"
-            className="flex-1 min-w-0 px-3 py-3 md:px-5 md:py-4 bg-black/40 border border-gray-700/50 rounded-xl md:rounded-2xl font-bold text-sm md:text-lg text-white placeholder-gray-600 tracking-wider md:tracking-widest focus:outline-none focus:border-purple-400/50 transition-colors"
+            className="flex-1 min-w-0 px-3 py-3 md:px-5 md:py-4 bg-black/40 border border-gray-700/50 rounded-xl md:rounded-2xl font-bold text-sm md:text-lg text-white placeholder-gray-600 tracking-wider md:tracking-widest focus:outline-none focus:border-emerald-400/50 transition-colors"
           />
           <button
             onClick={handleJoinRoom}
-            className="shrink-0 w-24 md:w-1/3 bg-gradient-to-r from-cyan-600 to-teal-600 hover:from-cyan-500 hover:to-teal-500 text-white font-bold text-sm md:text-lg py-3 md:py-4 rounded-xl md:rounded-2xl flex items-center justify-center gap-1 md:gap-2 shadow-[0_0_20px_rgba(8,145,178,0.3)] hover:shadow-[0_0_30px_rgba(8,145,178,0.5)] transition-all transform hover:-translate-y-1"
+            className="shrink-0 w-24 md:w-1/3 bg-gradient-to-r from-emerald-600 to-emerald-600 hover:from-emerald-500 hover:to-emerald-500 text-white font-bold text-sm md:text-lg py-3 md:py-4 rounded-xl md:rounded-2xl flex items-center justify-center gap-1 md:gap-2 shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] transition-all transform hover:-translate-y-1"
           >
             <Users className="w-4 h-4 md:w-[22px] md:h-[22px]" /> JOIN
           </button>
@@ -167,7 +167,7 @@ export default function LobbyScreen() {
       {/* 🚀 Premium Responsive Footer Section (Using Raw SVGs) */}
       <div className="z-10 mt-8 flex flex-col items-center gap-2 opacity-50 hover:opacity-100 transition-opacity duration-300">
         <p className="text-[11px] md:text-xs font-medium tracking-[0.15em] text-gray-400 uppercase">
-          Designed & Developed by <span className="text-cyan-400 font-extrabold tracking-normal">Sachin Kumar</span>
+          Designed & Developed by <span className="text-emerald-400 font-extrabold tracking-normal">Sachin Kumar</span>
         </p>
         <div className="flex gap-4 mt-1">
           <a 

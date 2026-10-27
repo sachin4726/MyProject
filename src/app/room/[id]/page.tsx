@@ -269,11 +269,11 @@ export default function GameRoomScreen() {
   const isMyTurn = socket.id === currentDrawerId;
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#0B0B1A] via-[#16123A] to-[#0B0B1A] text-white flex flex-col p-2 md:p-4 lg:p-6 font-sans relative overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-[#06130D] via-[#0B2418] to-[#06130D] text-white flex flex-col p-2 md:p-4 lg:p-6 font-sans relative overflow-hidden">
       
     {/* Background orbs */}
-      <div className="absolute top-[-10%] left-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-purple-600/20 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div>
-      <div className="absolute bottom-[-10%] right-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-cyan-600/20 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div>
+      <div className="absolute top-[-10%] left-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-emerald-600/20 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div>
+      <div className="absolute bottom-[-10%] right-[-10%] w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-emerald-600/20 rounded-full blur-[80px] md:blur-[120px] pointer-events-none"></div>
 
     {/* Top bar - Made flex-wrap and responsive text for mobile */}
       {/* Top bar - Fixed with Grid for perfect centering and one-line layout */}
@@ -289,7 +289,7 @@ export default function GameRoomScreen() {
           
           {/* Center: Word to Draw (Perfectly Centered) */}
           <div className="text-center flex justify-center items-center overflow-hidden px-1 md:px-2">
-              <span className="text-base md:text-4xl tracking-[0.05em] md:tracking-[0.2em] text-cyan-400 font-mono font-bold drop-shadow-[0_0_15px_rgba(34,211,238,0.8)] truncate max-w-full">
+              <span className="text-base md:text-4xl tracking-[0.05em] md:tracking-[0.2em] text-emerald-400 font-mono font-bold drop-shadow-[0_0_15px_rgba(52,211,153,0.8)] truncate max-w-full">
                   {wordToDraw || 'WAITING...'}
               </span>
           </div>
@@ -312,27 +312,27 @@ export default function GameRoomScreen() {
               
               {/* Modal: word selection */}
               {phase === 'WordSelection' && (
-                  <div className="absolute inset-0 bg-[#0B0B1A]/80 backdrop-blur-md flex flex-col items-center justify-center z-20 rounded-2xl md:rounded-3xl p-4">
+                  <div className="absolute inset-0 bg-[#06130D]/80 backdrop-blur-md flex flex-col items-center justify-center z-20 rounded-2xl md:rounded-3xl p-4">
                       {isMyTurn ? (
-                          <div className="bg-white/10 backdrop-blur-xl p-6 md:p-10 rounded-2xl md:rounded-3xl border border-white/20 shadow-[0_0_50px_rgba(168,85,247,0.3)] text-center animate-fade-in w-full max-w-lg">
-                              <h2 className="text-2xl md:text-4xl font-black tracking-widest text-white drop-shadow-[0_0_15px_rgba(168,85,247,0.8)] mb-6 md:mb-8 uppercase">Choose a word</h2>
+                          <div className="bg-white/10 backdrop-blur-xl p-6 md:p-10 rounded-2xl md:rounded-3xl border border-white/20 shadow-[0_0_50px_rgba(52,211,153,0.3)] text-center animate-fade-in w-full max-w-lg">
+                              <h2 className="text-2xl md:text-4xl font-black tracking-widest text-white drop-shadow-[0_0_15px_rgba(52,211,153,0.8)] mb-6 md:mb-8 uppercase">Choose a word</h2>
                               <div className="flex flex-col md:flex-row gap-3 md:gap-6 justify-center">
                                   {wordChoices.map(w => (
                                       <button 
                                           key={w} 
                                           onClick={() => socket.emit('choose_word', { roomId, word: w })} 
-                                          className="bg-black/40 border border-purple-500/50 hover:bg-purple-600/40 px-6 py-3 md:px-8 md:py-4 rounded-xl md:rounded-2xl font-bold text-lg md:text-2xl text-white transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(168,85,247,0.2)] hover:shadow-[0_0_25px_rgba(168,85,247,0.6)]"
+                                          className="bg-black/40 border border-emerald-500/50 hover:bg-emerald-600/40 px-6 py-3 md:px-8 md:py-4 rounded-xl md:rounded-2xl font-bold text-lg md:text-2xl text-white transition-all transform hover:scale-105 shadow-[0_0_15px_rgba(52,211,153,0.2)] hover:shadow-[0_0_25px_rgba(52,211,153,0.6)]"
                                       >
                                           {w}
                                       </button>
                                   ))}
                               </div>
-                              <p className="text-cyan-400 mt-6 md:mt-8 font-semibold tracking-widest text-xs md:text-sm">AUTO-SELECTING IN {timer}S</p>
+                              <p className="text-emerald-400 mt-6 md:mt-8 font-semibold tracking-widest text-xs md:text-sm">AUTO-SELECTING IN {timer}S</p>
                           </div>
                       ) : (
                           <div className="text-center animate-pulse">
                               <div className="text-5xl md:text-7xl mb-4 md:mb-6 drop-shadow-[0_0_20px_rgba(255,255,255,0.5)]">🤔</div>
-                              <h2 className="text-xl md:text-3xl font-bold text-cyan-400 tracking-widest drop-shadow-[0_0_15px_rgba(34,211,238,0.5)]">WAITING FOR DRAWER...</h2>
+                              <h2 className="text-xl md:text-3xl font-bold text-emerald-400 tracking-widest drop-shadow-[0_0_15px_rgba(52,211,153,0.5)]">WAITING FOR DRAWER...</h2>
                           </div>
                       )}
                   </div>
@@ -340,7 +340,7 @@ export default function GameRoomScreen() {
 
               {/* Modal: game over */}
               {phase === 'GameOver' && gameOverData && (
-                  <div className="absolute inset-0 bg-[#0B0B1A]/90 backdrop-blur-xl flex flex-col items-center justify-center z-30 rounded-2xl md:rounded-3xl border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)] p-4">
+                  <div className="absolute inset-0 bg-[#06130D]/90 backdrop-blur-xl flex flex-col items-center justify-center z-30 rounded-2xl md:rounded-3xl border border-white/10 shadow-[0_0_50px_rgba(0,0,0,0.5)] p-4">
                       <h1 className="text-4xl md:text-7xl font-black tracking-widest text-transparent bg-clip-text bg-gradient-to-r from-yellow-400 to-orange-500 mb-4 md:mb-6 drop-shadow-[0_0_25px_rgba(250,204,21,0.6)] uppercase text-center">Game Over!</h1>
                       <h2 className="text-2xl md:text-4xl text-white mb-6 md:mb-10 font-medium text-center">Winner: <span className="font-black text-yellow-400 drop-shadow-[0_0_15px_rgba(250,204,21,0.8)]">{gameOverData.winner?.name}</span> 🏆</h2>
                       
@@ -349,7 +349,7 @@ export default function GameRoomScreen() {
                           {gameOverData.leaderboard.map((p: any, i: number) => (
                               <div key={i} className={`flex justify-between items-center my-3 md:my-4 p-3 md:p-4 rounded-xl md:rounded-2xl transition-all ${i === 0 ? 'bg-yellow-500/20 border border-yellow-500/50 shadow-[0_0_20px_rgba(250,204,21,0.2)]' : 'bg-black/40 border border-white/5'}`}>
                                   <span className={`font-bold text-lg md:text-xl ${i === 0 ? 'text-yellow-400' : 'text-gray-200'} truncate mr-2`}>#{i + 1} {p.name}</span>
-                                  <span className="text-cyan-400 font-black text-xl md:text-2xl drop-shadow-[0_0_10px_rgba(34,211,238,0.5)] whitespace-nowrap">{p.score} <span className="text-[10px] md:text-xs text-gray-500 font-medium">pts</span></span>
+                                  <span className="text-emerald-400 font-black text-xl md:text-2xl drop-shadow-[0_0_10px_rgba(52,211,153,0.5)] whitespace-nowrap">{p.score} <span className="text-[10px] md:text-xs text-gray-500 font-medium">pts</span></span>
                               </div>
                           ))}
                       </div>
@@ -357,12 +357,12 @@ export default function GameRoomScreen() {
               )}
 
               {/* The canvas - Using aspect-video and max-width for responsiveness */}
-              <div className={`w-full max-w-[800px] aspect-[4/3] bg-[#0d1126] rounded-2xl md:rounded-3xl overflow-hidden border-2 ${isMyTurn && phase === 'ActiveDrawing' ? 'border-cyan-400 shadow-[0_0_30px_rgba(34,211,238,0.3)] cursor-crosshair' : 'border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] cursor-not-allowed'} relative transition-all duration-300`}>
+              <div className={`w-full max-w-[800px] aspect-[4/3] bg-[#071A11] rounded-2xl md:rounded-3xl overflow-hidden border-2 ${isMyTurn && phase === 'ActiveDrawing' ? 'border-emerald-400 shadow-[0_0_30px_rgba(52,211,153,0.3)] cursor-crosshair' : 'border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] cursor-not-allowed'} relative transition-all duration-300`}>
                   <canvas
                       ref={canvasRef}
                       width={800} // Internal resolution stays 800x600
                       height={600}
-                      className="w-full h-full bg-[#0d1126] touch-none"
+                      className="w-full h-full bg-[#071A11] touch-none"
                       onMouseDown={startDrawing}
                       onMouseMove={draw}
                       onMouseUp={stopDrawing}
@@ -411,8 +411,8 @@ export default function GameRoomScreen() {
           <div className="order-2 lg:order-3 w-full lg:w-80 h-[22vh] lg:h-[600px] bg-white/5 backdrop-blur-xl rounded-xl md:rounded-3xl flex flex-col border border-white/10 shadow-[0_8px_32px_0_rgba(0,0,0,0.36)] overflow-hidden">
               <div className="flex-1 p-2 md:p-5 overflow-y-auto space-y-1.5 md:space-y-3 custom-scrollbar">
                   {messages.map((msg, i) => (
-                      <div key={i} className={`text-xs md:text-sm p-2 md:p-3 rounded-lg md:rounded-2xl ${msg.type === 'system' ? 'bg-cyan-500/10 text-cyan-300 font-bold border border-cyan-500/20' : i % 2 === 0 ? 'bg-black/20 text-gray-200' : 'bg-transparent text-gray-200'}`}>
-                          {msg.type === 'chat' && <span className="font-bold text-purple-400 tracking-wide">{msg.name}: </span>}
+                      <div key={i} className={`text-xs md:text-sm p-2 md:p-3 rounded-lg md:rounded-2xl ${msg.type === 'system' ? 'bg-emerald-500/10 text-emerald-300 font-bold border border-emerald-500/20' : i % 2 === 0 ? 'bg-black/20 text-gray-200' : 'bg-transparent text-gray-200'}`}>
+                          {msg.type === 'chat' && <span className="font-bold text-emerald-400 tracking-wide">{msg.name}: </span>}
                           {msg.text}
                       </div>
                   ))}
@@ -424,7 +424,7 @@ export default function GameRoomScreen() {
                       onChange={(e) => setCurrentGuess(e.target.value)}
                       disabled={isMyTurn && phase === 'ActiveDrawing'}
                       placeholder={isMyTurn && phase === 'ActiveDrawing' ? "Drawing! No chatting." : "Type your guess..."}
-                      className="w-full px-3 py-1.5 md:px-5 md:py-4 bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed border border-white/10 rounded-md md:rounded-2xl focus:outline-none focus:border-cyan-400/50 focus:ring-1 focus:ring-cyan-400/50 transition-all font-medium text-xs md:text-base text-white placeholder-gray-500 tracking-wide"
+                      className="w-full px-3 py-1.5 md:px-5 md:py-4 bg-white/5 disabled:opacity-50 disabled:cursor-not-allowed border border-white/10 rounded-md md:rounded-2xl focus:outline-none focus:border-emerald-400/50 focus:ring-1 focus:ring-emerald-400/50 transition-all font-medium text-xs md:text-base text-white placeholder-gray-500 tracking-wide"
                   />
               </form>
           </div>
@@ -435,16 +435,16 @@ export default function GameRoomScreen() {
               <div className="flex-1 overflow-y-auto space-y-2 md:space-y-3 pr-2 custom-scrollbar">
                   {players.length === 0 && <p className="text-gray-500 text-xs md:text-sm font-medium">Waiting for players...</p>}
                   {players.map((p, i) => (
-                      <div key={i} className={`flex justify-between items-center p-2 md:p-3 rounded-xl md:rounded-2xl border transition-all ${p.connectionId === currentDrawerId ? 'bg-cyan-500/10 border-cyan-500/50 shadow-[0_0_15px_rgba(34,211,238,0.2)]' : 'bg-black/20 border-white/5'}`}>
+                      <div key={i} className={`flex justify-between items-center p-2 md:p-3 rounded-xl md:rounded-2xl border transition-all ${p.connectionId === currentDrawerId ? 'bg-emerald-500/10 border-emerald-500/50 shadow-[0_0_15px_rgba(52,211,153,0.2)]' : 'bg-black/20 border-white/5'}`}>
                           <span className="font-semibold text-gray-200 text-sm md:text-base truncate pr-2">
                               {p.displayName} {p.connectionId === currentDrawerId && ' ✏️'}
                           </span>
-                          <span className="text-xs md:text-sm font-bold text-cyan-400 drop-shadow-[0_0_5px_rgba(34,211,238,0.8)] whitespace-nowrap">{p.totalPoints} <span className="text-[10px] text-gray-500">pts</span></span>
+                          <span className="text-xs md:text-sm font-bold text-emerald-400 drop-shadow-[0_0_5px_rgba(52,211,153,0.8)] whitespace-nowrap">{p.totalPoints} <span className="text-[10px] text-gray-500">pts</span></span>
                       </div>
                   ))}
               </div>
               {phase === 'Lobby' && (
-                  <button onClick={handleStartGame} className="mt-4 md:mt-5 w-full bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-500 hover:to-indigo-500 text-white py-3 md:py-4 rounded-xl md:rounded-2xl font-bold tracking-wider text-sm md:text-base shadow-[0_0_20px_rgba(124,58,237,0.3)] hover:shadow-[0_0_30px_rgba(124,58,237,0.5)] transition-all transform hover:-translate-y-1">
+                  <button onClick={handleStartGame} className="mt-4 md:mt-5 w-full bg-gradient-to-r from-emerald-600 to-green-600 hover:from-emerald-500 hover:to-green-500 text-white py-3 md:py-4 rounded-xl md:rounded-2xl font-bold tracking-wider text-sm md:text-base shadow-[0_0_20px_rgba(34,197,94,0.3)] hover:shadow-[0_0_30px_rgba(34,197,94,0.5)] transition-all transform hover:-translate-y-1">
                       START GAME
                   </button>
               )}
