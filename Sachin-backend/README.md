@@ -2,7 +2,6 @@
 
 An authoritative, event-driven game server for the Skribbl multiplayer drawing and guessing game, built with **Node.js**, **Express**, and **Socket.IO**.
 
----
 
 ## 👨‍💻 Author & Developer
 
