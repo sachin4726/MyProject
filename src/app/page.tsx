@@ -66,7 +66,7 @@ export default function LobbyScreen() {
       <div className="text-center mb-8 md:mb-10 z-10 animate-fade-in">
         <div className="flex justify-center items-center gap-3 md:gap-4 mb-2 md:mb-3">
           <Gamepad2 className="w-10 h-10 md:w-12 md:h-12 text-emerald-400 drop-shadow-[0_0_15px_rgba(52,211,153,0.8)]" />
-          <h1 className="text-4xl md:text-6xl font-black tracking-[0.1em] md:tracking-[0.15em] text-white drop-shadow-[0_0_25px_rgba(52,211,153,0.7)]">
+          <h1 className="font-mono text-4xl md:text-6xl font-black italic tracking-[0.04em] md:tracking-[0.08em] text-white drop-shadow-[0_0_25px_rgba(52,211,153,0.7)]">
             SKRIBBL
           </h1>
         </div>
